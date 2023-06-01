@@ -34,7 +34,7 @@ public:
   int64_t size() const noexcept { return static_cast<int64_t>(_values.size()); }
 
 private:
-  const gsl::span<const ElementType> _values;
+  gsl::span<const ElementType> _values;
 };
 
 template <> class MetadataArrayView<bool> {
