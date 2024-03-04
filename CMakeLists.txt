@@ -17,6 +17,11 @@ if(ANDROID)
     set(VCPKG_HOST_TRIPLET "${VCPKG_TRIPLET}")
 endif()
 
+if(EMSCRIPTEN)
+    set(VCPKG_TRIPLET "wasm32-emscripten")
+    set(VCPKG_HOST_TRIPLET "${VCPKG_TRIPLET}")
+endif()
+
 
 message(STATUS "VCPKG_TRIPLET ${VCPKG_TRIPLET}")
 
